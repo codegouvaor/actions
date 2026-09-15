@@ -76,7 +76,7 @@ jobs:
       uses-react-ads: ${{ steps.detect.outputs.uses-react-ads }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Repository structure check
         id: repo
@@ -135,7 +135,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: ADS check
         uses: $/actions/ads-check
@@ -151,7 +151,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up pnpm
         if: ${{ needs.validate.outputs.is-node == 'true' && needs.validate.outputs.package-manager == 'pnpm' }}
